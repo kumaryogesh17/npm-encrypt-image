@@ -36,9 +36,9 @@ can store decrypted image file using writeFileSync Function
 fs.writeFileSync('decrepted.jpg',decryptedImage);
 ````
 
-## Example :
+# Example of encryption and decryption of image :
 
-````
+```
 import { image } from "encrypt-image";
 import fs from 'fs'
 
@@ -51,4 +51,19 @@ const encryptImage = image.encrypt(img, keys.publicKey, keys.symmetricKey);
 const decryptedImage = image.decrypt(keys.privateKey);
 
 fs.writeFileSync('dec.jpg',decryptedImage);
-````
+```
+
+# Example of encryption and decryption of Text :
+```
+import { text } from "encrypt-image";
+
+const Keys = text.generateKeys();
+const plaintext = "Hi this Encryption";
+const encryptedText = text.encrypt(plaintext, Keys.publicKey);
+
+console.log(encryptedText);
+
+const decryptedText = text.decrypt(encryptedText,Keys.privateKey);
+
+console.log(decryptedText);
+```
