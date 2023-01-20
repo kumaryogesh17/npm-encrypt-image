@@ -26,7 +26,9 @@ const encryptedImage = image.encrypt(image, keys.publicKey, keys.symmetricKey);
 use decrypt function to get the original image , in this function just pass private key (keys.privateKey)
 
 ````
-const decryptedImage = image.decrypt(keys.privateKey);
+const encryptedData = fs.readFileSync('encrypted.bin');
+
+const decryptedImage = image.decrypt(encryptedData,keys.privateKey);
 ````
 
 
@@ -48,7 +50,7 @@ const img = fs.readFileSync('image.jpg')
 
 const encryptImage = image.encrypt(img, keys.publicKey, keys.symmetricKey);
 
-const decryptedImage = image.decrypt(keys.privateKey);
+const decryptedImage = image.decrypt(encryptedData,keys.privateKey);
 
 fs.writeFileSync('dec.jpg',decryptedImage);
 ```
