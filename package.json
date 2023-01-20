@@ -1,13 +1,13 @@
 {
   "name": "encrypt-image",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "encrypt and decrypt images using secret keys and public, private keys",
   "main": "index.js",
   "type" :"module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["Hybrid Encryption of images","Encryption","Decryption","Encrypt Images","encrypt-image"],
+  "keywords": ["Hybrid Encryption of images","Encryption","Decryption","Encrypt Images","encrypt-image","encrypt text","encrypt","decrypt",""],
   "author": "@kumaryogesh17",
   "license": "ISC"
 }

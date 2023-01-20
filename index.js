@@ -30,8 +30,8 @@ export const image = {
 
     },
 
-    decrypt: function decrypt(privateKey) {
-        const encryptedData = fs.readFileSync('encrypted.bin');
+    decrypt: function decrypt(encryptedData, privateKey) {
+        // const encryptedData = fs.readFileSync('encrypted.bin');
         const encryptedSymmetricKey1 = encryptedData.slice(0, 256);
         const encryptedImage1 = encryptedData.slice(256);
         const symmetricKey1 = crypto.privateDecrypt(privateKey, encryptedSymmetricKey1);
