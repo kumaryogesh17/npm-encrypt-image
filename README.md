@@ -49,6 +49,7 @@ const keys = image.generateKeys();
 const img = fs.readFileSync('image.jpg')
 
 const encryptImage = image.encrypt(img, keys.publicKey, keys.symmetricKey);
+const encryptedData = fs.readFileSync('encrypted.bin');
 
 const decryptedImage = image.decrypt(encryptedData,keys.privateKey);
 
